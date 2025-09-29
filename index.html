@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دموی مفسر پارس‌نشان</title>
+  <!-- ۱. فراخوانی استایل‌های پارس‌نشان -->
+  <link rel="stylesheet" href="parsneshan.css">
+  <style>
+    /* استایل‌های مربوط به خود صفحه دمو */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Vazirmatn", Roboto, sans-serif; background-color: #f0f2f5; color: #333; margin: 0; padding: 20px; }
+    .container { display: flex; gap: 20px; height: 75vh; }
+    .container > div { flex: 1; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 15px; overflow: auto; }
+    textarea { width: 100%; height: 100%; border: none; resize: none; font-size: 16px; line-height: 1.6; box-sizing: border-box; }
+    textarea:focus { outline: none; }
+    #output { font-size: 16px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <textarea id="input">
+...توجه
+این یک دموی زنده از کتابخانه «پارس‌نشان» است.
+...
+
+- [x] قابلیت‌های فارسی
+- [ ] قابلیت‌های انگلیسی
+- This is an LTR list item.
+
+...شعر
+بنی آدم اعضای یکدیگرند
+که در آفرینش ز یک گوهرند
+...
+      </textarea>
+    </div>
+    <div id="output"></div>
+  </div>
+
+  <!-- ۲. فراخوانی کتابخانه اصلی markdown-it -->
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+
+  <!-- ۳. فراخوانی کتابخانه پارس‌نشان -->
+  <script src="parsneshan.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji@3.0.0/dist/markdown-it-emoji.min.js"></script>
+
+  <!-- ۴. استفاده از کتابخانه -->
+  <script>
+    const parsneshan = createParsNeshan({
+      plugins: [ window.markdownitEmoji ]
+    });
+
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    function renderMarkdown() {
+      const markdownText = input.value;
+      const htmlResult = parsneshan.render(markdownText);
+      output.innerHTML = htmlResult;
+    }
+
+    input.addEventListener('input', renderMarkdown);
+    renderMarkdown();
+  </script>
+</body>
+</html>
