@@ -1,6 +1,6 @@
 # پارس‌نشان (ParsNeshan)
 
-![پارس‌نشان](https://img.shields.io/badge/ParsNeshan-v1.3.0-blue)
+![پارس‌نشان](https://img.shields.io/badge/ParsNeshan-v1.0.0-blue)
 ![زبان](https://img.shields.io/badge/Language-Persian-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
