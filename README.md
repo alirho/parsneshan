@@ -1,6 +1,6 @@
 # پارس‌نشان (ParsNeshan)
 
-![پارس‌نشان](https://img.shields.io/badge/Dabir-v1.3.0-blue)
+![پارس‌نشان](https://img.shields.io/badge/ParsNeshan-v1.3.0-blue)
 ![زبان](https://img.shields.io/badge/Language-Persian-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -101,6 +101,12 @@
 ```
 
 ---
+
+## دموی زنده
+
+شما می‌توانید کتابخانه «پارس‌نشان» را به صورت زنده در لینک زیر امتحان کنید:
+
+**[مشاهده دموی زنده](https://alirho.github.io/parsneshan/)**
 
 ## نصب و استفاده
 
